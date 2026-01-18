@@ -5,6 +5,12 @@
 
 using namespace std;
 
+void swap_if_greater(vector<int> &nums1, vector<int> &nums2,int m,int n){
+    if(nums1[m]>nums2[n]){
+        swap(nums1[m],nums2[n]);
+    }
+}
+
 void merge_brute(vector<int> &nums1, vector<int> &nums2){
     vector<int> ans;
     int m=nums1.size(),n=nums2.size();
@@ -53,14 +59,34 @@ void merge_optimal_one(vector<int> &nums1, vector<int> &nums2){
 void merge_optimal_two(vector<int> &nums1, vector<int> &nums2){
     int m=nums1.size();
     int n=nums2.size();
-    int gap=static_cast<int>(ceil(static_cast<double>(m+n)/2));
-    do{
-        int i=0;
-        int j=gap;
-        if()
-
-    }while(gap!=1);
+    // int gap=static_cast<int>(ceil(static_cast<double>(m+n)/2));
+    int gap=(m+n)/2+(m+n)%2;  //formulae for taking ceil
+    while(true){
+        int left=0;
+        int right= left+gap;
+        while(right<m+n){
+            //left in nums1, right in nums2
+            if(left<m && right>=m){
+                swap_if_greater(nums1,nums2,left,right-m);
+            }
+            // both in nums1
+            else if(left<m && right<m){
+                swap_if_greater(nums1,nums1,left,right);
+            }
+            // both in nums2
+            else if(left>=m){  //or use else
+                swap_if_greater(nums2,nums2,left-m,right-m);
+            }
+            left++;
+            right++;
+        }
+        if(gap==1){
+            break;
+        }
+        gap=gap/2+gap%2;
+    }
 }
+
 
 int main(){
     vector<int> arr1={23,45,66,78,123};
