@@ -107,6 +107,7 @@ void merge(vector<int>& arr, int low, int mid, int high) {
         arr[i] = temp[i - low];
     }
 }
+
 int countPairs(vector<int> &nums,int low, int mid,int high){
     int count=0;
     int right=mid+1;
@@ -118,6 +119,7 @@ int countPairs(vector<int> &nums,int low, int mid,int high){
     }
     return count;
 }
+
 int mergeSort(vector<int>& arr, int low, int high) {
     int count=0;
     if (low >= high) return count;
@@ -128,6 +130,7 @@ int mergeSort(vector<int>& arr, int low, int high) {
     merge(arr, low, mid, high);    // merging sorted halves
     return count;
 }
+
 int reversePairsOptimal(vector<int>& nums) {
     int count=0;
     count=mergeSort(nums,0,nums.size()-1);
