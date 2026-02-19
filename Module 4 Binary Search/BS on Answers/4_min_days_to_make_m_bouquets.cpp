@@ -43,11 +43,12 @@ int minDaysLS(vector<int>& bloomDay, int m, int k) {
     }
     return -1;
 }
+
 int main(){
     vector<int> bloomDay={1,10,3,10,2};
     int m=3;
     int k=1;
-    cout<<minDaysLS(bloomDay,3,1)<<endl;
-    cout<<minDaysBS(bloomDay,3,1);
+    cout<<minDaysLS(bloomDay,m,k)<<endl;
+    cout<<minDaysBS(bloomDay,m,k);
     return 0;
 }
