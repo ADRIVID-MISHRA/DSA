@@ -62,7 +62,7 @@ double kthElementOfSortedArraysOptimal(vector<int>& nums1, vector<int>& nums2,in
     int n=n1+n2;
     if(n1>n2) return kthElementOfSortedArraysOptimal(nums2,nums1,k);   //RUN BS only on the smaller array
     int partition=k;
-    int low=max(k-n2,0),high=min(k,n1);
+    int low=max(k-n2,0),high=min(k,n1);    //new search range
     while(low<=high){
         int mid1=(low+high)/2;
         int mid2=partition-mid1;
