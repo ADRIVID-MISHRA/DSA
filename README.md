@@ -16,7 +16,7 @@ I am solving problems daily, and this repository will be continuously updated as
 
 ✅ All approaches included wherever Striver explains them
 
-✅ Written in C++
+✅ Written in C++ using industry standard techniques
 
 ✅ Structured exactly by Modules & Lectures
 
