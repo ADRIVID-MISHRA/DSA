@@ -50,7 +50,7 @@ public:
         delete head0;
         delete head1;
         delete head2;
-        return head0->next;
+        return newHead;
     }
 };
 
