@@ -67,7 +67,7 @@ int main(){
     root->left->left=new TreeNode(14);
     root->left->right->left=new TreeNode(7);
     root->left->right->left->left=new TreeNode(66);
-    root->left->right->left->left->left=new TreeNode(88);
+    root->left->right->left->left->left=new TreeNode(77);
     root->left->right->right=new TreeNode(23);
     root->left->right->right->right=new TreeNode(98);
     root->left->right->right->right->right=new TreeNode(18);
