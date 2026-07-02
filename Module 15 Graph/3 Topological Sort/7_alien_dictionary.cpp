@@ -1,10 +1,10 @@
 #include<iostream>
 #include<vector>
 #include<queue>
+
 using namespace std;
 
 class Solution{
-
 public:
     string findOrder(vector<string> &dict,int N,int K){
         vector<vector<int>> adj(K);    //nodes from 0 to K-1

@@ -9,7 +9,7 @@ class Solution {
         vis[node]=1;
         
         for(int neighbour:adj[node]){
-            if(vis[neighbour]==0){    //note is not visited
+            if(vis[neighbour]==0){    //node is not visited
                 dfs(adj,neighbour,vis,st);
             }
         }
