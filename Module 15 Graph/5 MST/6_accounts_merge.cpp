@@ -1,3 +1,4 @@
+//LC 721
 #include<iostream>
 #include<vector>
 #include<unordered_map>
@@ -6,12 +7,11 @@
 using namespace std;
 
 class DisjointSet{
-    vector<int> rank,parent,size;
+    vector<int> rank,parent;
 public:
     //constructor
     DisjointSet(int n){   //supports both 1-based indexing(1 to n nodes) and 0-based indexing(0 to n nodes)
         rank.resize(n+1,0);
-        size.resize(n+1,1);
         parent.resize(n+1);
         for(int i=0;i<=n;i++){
             parent[i]=i;
@@ -60,7 +60,7 @@ public:
         vector<vector<string>> mergedMails(n);
         for(auto it:mpp){
             string mail=it.first;
-            int node=ds.findParent(it.second);  //get the ultimate parent of the node
+            int node=ds.findParent(it.second);  //get the ultimate parent of theṇ node
             mergedMails[node].push_back(mail);
         }
 
